@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View } from "../Themed";
 import { Image, Touchable, TouchableOpacity } from "react-native";
 import ImageView from "../common/ImageView";
-import { router } from "expo-router";
+import { Link, router } from "expo-router";
 
 export default function ActivityOneScreen() {
   return (
@@ -21,9 +21,12 @@ export default function ActivityOneScreen() {
 
       <View className="pt-24  items-center justify-center bg-transparent  ">
         <TouchableOpacity onPress={() => router.push("/login")}>
-          <Text className="border px-10 py-4 rounded-lg bg-green-600 text-white text-xl font-semibold">
+          <Link
+            href={"/login"}
+            className="border px-10 py-4 rounded-lg bg-green-600 text-white text-xl font-semibold"
+          >
             Next
-          </Text>
+          </Link>
         </TouchableOpacity>
         <Text className=" w-[250px]  pt-5 text-2xl font-bold text-center text-green-800 ">
           Design By Karan Chaudhary
