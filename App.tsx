@@ -18,7 +18,7 @@ export default function App() {
         <Stack.Screen
           name="onBoarding"
           component={OnBoardingScreen}
-          options={{ headerShown: true }}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Home"
