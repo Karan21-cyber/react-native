@@ -1,8 +1,8 @@
-import ActivityScreen from "@/screen/activity";
 import HomeScreen from "@/screen/home";
 import OnBoardingScreen from "@/screen/onBoarding";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import WelcomeScreen from "@/screen/welcome";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -11,8 +11,8 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Activity">
         <Stack.Screen
-          name="Activity"
-          component={ActivityScreen}
+          name="Welcome"
+          component={WelcomeScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen
@@ -23,7 +23,7 @@ export default function App() {
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          options={{ headerShown: true }}
+          options={{ headerShown: true, autoHideHomeIndicator: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>
