@@ -3,6 +3,7 @@ import OnBoardingScreen from "@/screen/onBoarding";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import WelcomeScreen from "@/screen/welcome";
+import { LoginScreen } from "@/screen/login/login-screen";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -24,6 +25,11 @@ export default function App() {
           name="Home"
           component={HomeScreen}
           options={{ headerShown: true, autoHideHomeIndicator: false }}
+        />
+        <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{ headerShown: false, autoHideHomeIndicator: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

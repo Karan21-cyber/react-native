@@ -3,7 +3,7 @@ import { Image, Text, Touchable, TouchableOpacity, View } from "react-native";
 
 export default function WelcomeScreen({ navigation }) {
   return (
-    <View className="relative bg-gray-100 flex flex-col  justify-center items-center w-full h-full ">
+    <View className="relative    bg-gray-100 flex flex-col  justify-center items-center w-full h-full ">
       <View className="w-[80%] h-[80vh] ">
         <Image
           source={require("../../images/welcome.jpg")}
@@ -33,7 +33,7 @@ export default function WelcomeScreen({ navigation }) {
 
         <View className="text-center  text-base text-gray-500 flex flex-row gap-2  items-center justify-center ">
           <Text>Already have an account?</Text>
-          <TouchableOpacity onPress={() => navigation.navigate("onBoarding")}>
+          <TouchableOpacity onPress={() => navigation.navigate("Login")}>
             <Text className="button text-bold  text-blue-700 w-full text-center  rounded-full">
               Sign In
             </Text>
