@@ -3,24 +3,25 @@ import {
   CommonInputPassword,
 } from "@/components/common/common-input";
 import { CommonLoginHeader } from "@/components/common/common-login-header";
-import React from "react";
+import React, { useState } from "react";
 import {
   Image,
-  Pressable,
   SafeAreaView,
   Text,
   TouchableOpacity,
   View,
 } from "react-native";
 
-export const LoginScreen = ({ navigation }) => {
+export const SignUpScreen = ({ navigation }) => {
+  const [isSelected, setSelection] = useState(false);
   return (
     <View className="relative top-10 h-full px-10 flex flex-1 gap-10 items-center justify-center ">
-      <CommonLoginHeader title="Sign In" />
+      <CommonLoginHeader title="Sign Up" />
 
       <SafeAreaView className="flex flex-col justify-center items-center ">
         <View className="flex flex-col  ">
           <View className="flex flex-col   ">
+            <CommonInput label="Name" placeholder="John Doe" type="text" />
             <CommonInput
               label="Email"
               placeholder="example@gmail.com"
@@ -34,15 +35,16 @@ export const LoginScreen = ({ navigation }) => {
           </View>
 
           <TouchableOpacity className=" w-full flex flex-row justify-end ">
+            {/* <CheckBox value={isSelected} onValueChange={setSelection} /> */}
             <Text className="text-sm underline font-semibold text-blue-500">
-              ForgetPassowrd?
+              Terms & condition
             </Text>
           </TouchableOpacity>
 
           <View className="pt-5">
             <TouchableOpacity className="w-full  bg-blue-500 rounded-full flex flex-row justify-center items-center">
               <Text className="w-full text-center py-2 text-lg text-white font-bold">
-                Sign In
+                Sign Up
               </Text>
             </TouchableOpacity>
           </View>
@@ -52,7 +54,7 @@ export const LoginScreen = ({ navigation }) => {
       <View className="w-full px-10 flex flex-row justify-between items-center">
         <View className="w-[30%] h-[1px]  bg-gray-300"></View>
         <View>
-          <Text className="text-base ">Or sign in with</Text>
+          <Text className="text-base ">Or sign up with</Text>
         </View>
         <View className="w-[30%] h-[1px] bg-gray-300"></View>
       </View>
@@ -77,8 +79,8 @@ export const LoginScreen = ({ navigation }) => {
       <View>
         <View className="flex flex-row gap-1 justify-center items-center">
           <Text className="text-base ">Don't have an account?</Text>
-          <TouchableOpacity onPress={() => navigation.navigate("Signup")}>
-            <Text className="text-blue-500 underline">Sign Up</Text>
+          <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+            <Text className="text-blue-500 underline">Sign In</Text>
           </TouchableOpacity>
         </View>
       </View>

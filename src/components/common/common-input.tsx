@@ -13,12 +13,12 @@ export const CommonInput = ({
   placeholder,
 }: CommpnInputDTO) => {
   return (
-    <View className="flex flex-col gap-1 w-full">
-      <Text className="text-lg ">{label}</Text>
+    <View className="flex flex-col gap-1 w-full pb-6">
+      <Text className="text-base  ">{label}</Text>
       <TextInput
         placeholder={placeholder}
         keyboardType={type}
-        className="border pl-3  rounded w-full h-10 text-lg"
+        className="border pl-3  rounded w-full h-10 text-base border-gray-300"
       />
     </View>
   );
@@ -33,16 +33,16 @@ export const CommonInputPassword = ({
   className,
   placeholder,
 }: CommpnInputDTO) => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   return (
-    <View className="flex flex-col gap-1 w-full">
-      <Text className="text-lg ">{label}</Text>
+    <View className="flex flex-col gap-1 w-full pb-6">
+      <Text className="text-base ">{label}</Text>
 
       <View className="relative w-full  ">
         <TextInput
           placeholder={placeholder}
           secureTextEntry={show}
-          className="border px-4 rounded w-full h-10 text-lg"
+          className="border px-4 rounded w-full h-10 text-base border-gray-300  "
         />
         <TouchableOpacity
           onPress={() => setShow(!show)}
